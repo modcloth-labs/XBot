@@ -11,6 +11,10 @@
 		A4180F5E19DB598500403AD9 /* XBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4180F5219DB598500403AD9 /* XBot.framework */; };
 		A4180F6519DB598500403AD9 /* XBotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4180F6419DB598500403AD9 /* XBotTests.swift */; };
 		A4180F7819DB5F1200403AD9 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4180F7719DB5F1200403AD9 /* Device.swift */; };
+		A4E60BC219DB69DB0068A941 /* Integration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E60BC119DB69DB0068A941 /* Integration.swift */; };
+		A4E60BC419DB69F60068A941 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E60BC319DB69F60068A941 /* Server.swift */; };
+		A4E60BC619DB6A040068A941 /* Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E60BC519DB6A040068A941 /* Bot.swift */; };
+		A4E60BC819DB6CC60068A941 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E60BC719DB6CC60068A941 /* Async.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +35,10 @@
 		A4180F6319DB598500403AD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4180F6419DB598500403AD9 /* XBotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XBotTests.swift; sourceTree = "<group>"; };
 		A4180F7719DB5F1200403AD9 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		A4E60BC119DB69DB0068A941 /* Integration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Integration.swift; sourceTree = "<group>"; };
+		A4E60BC319DB69F60068A941 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		A4E60BC519DB6A040068A941 /* Bot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bot.swift; sourceTree = "<group>"; };
+		A4E60BC719DB6CC60068A941 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,10 @@
 			children = (
 				A4180F5719DB598500403AD9 /* XBot.h */,
 				A4180F7719DB5F1200403AD9 /* Device.swift */,
+				A4E60BC119DB69DB0068A941 /* Integration.swift */,
+				A4E60BC319DB69F60068A941 /* Server.swift */,
+				A4E60BC519DB6A040068A941 /* Bot.swift */,
+				A4E60BC719DB6CC60068A941 /* Async.swift */,
 				A4180F5519DB598500403AD9 /* Supporting Files */,
 			);
 			path = XBot;
@@ -212,6 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4E60BC219DB69DB0068A941 /* Integration.swift in Sources */,
+				A4E60BC619DB6A040068A941 /* Bot.swift in Sources */,
+				A4E60BC419DB69F60068A941 /* Server.swift in Sources */,
+				A4E60BC819DB6CC60068A941 /* Async.swift in Sources */,
 				A4180F7819DB5F1200403AD9 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

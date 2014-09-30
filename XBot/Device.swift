@@ -8,6 +8,27 @@
 
 import Foundation
 
-public func foo() {
-    println("foo")
+public class Device {
+    public var id:String
+    public var name:String
+    public var osVersion:String
+    public var type:String
+    
+    public init(deviceDictionary:NSDictionary){
+        id = deviceDictionary["_id"]! as String
+        name = deviceDictionary["name"]! as String
+        osVersion = deviceDictionary["osVersion"]! as String
+        type = deviceDictionary["deviceType"]! as String
+    }
+}
+
+func devicesFromDevicesJson(json:Dictionary<String, AnyObject>) -> [Device] {
+    var devices:[Device] = []
+    if let results = json["results"] as AnyObject? as? [Dictionary<String, AnyObject>]{
+        for dict in results {
+            devices.append(Device(deviceDictionary: dict))
+        }
+    }
+    
+    return devices
 }
