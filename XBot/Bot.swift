@@ -19,3 +19,15 @@ public class Bot {
         name = botDictionary["name"]! as String
     }
 }
+
+func botsFromBotsJson(json:Dictionary<String, AnyObject>) -> [Bot] {
+    
+    var bots:[Bot] = []
+    if let results = json["results"] as AnyObject? as? [Dictionary<String, AnyObject>]{
+        for dict in results {
+            bots.append(Bot(botDictionary: dict))
+        }
+    }
+    
+    return bots
+}

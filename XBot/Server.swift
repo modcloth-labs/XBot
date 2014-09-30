@@ -32,4 +32,8 @@ public class Server {
                 }
         }
     }
+    
+    public func fetchBots(completion:([Bot]) -> () ) {
+    
+    }
 }

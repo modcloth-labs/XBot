@@ -15,6 +15,7 @@
 		A4E60BC419DB69F60068A941 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E60BC319DB69F60068A941 /* Server.swift */; };
 		A4E60BC619DB6A040068A941 /* Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E60BC519DB6A040068A941 /* Bot.swift */; };
 		A4E60BC819DB6CC60068A941 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E60BC719DB6CC60068A941 /* Async.swift */; };
+		A4E60BD519DB76AB0068A941 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E60BD419DB76AB0068A941 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		A4E60BC319DB69F60068A941 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		A4E60BC519DB6A040068A941 /* Bot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bot.swift; sourceTree = "<group>"; };
 		A4E60BC719DB6CC60068A941 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
+		A4E60BD419DB76AB0068A941 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/XBotBuilder-gwouacushguetjdkpzqhzldqdxio/Build/Products/Debug/Alamofire.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4E60BD519DB76AB0068A941 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		A4180F4819DB598500403AD9 = {
 			isa = PBXGroup;
 			children = (
+				A4E60BD419DB76AB0068A941 /* Alamofire.framework */,
 				A4180F5419DB598500403AD9 /* XBot */,
 				A4180F6119DB598500403AD9 /* XBotTests */,
 				A4180F5319DB598500403AD9 /* Products */,
@@ -341,6 +345,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/XBotBuilder-gwouacushguetjdkpzqhzldqdxio/Build/Products/Debug",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = XBot/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -360,6 +368,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/XBotBuilder-gwouacushguetjdkpzqhzldqdxio/Build/Products/Debug",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = XBot/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
