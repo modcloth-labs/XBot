@@ -31,3 +31,16 @@ public class Integration {
         }
     }
 }
+
+
+func integrationsFromIntegrationsJson(json:Dictionary<String, AnyObject>) -> [Integration] {
+    
+    var integrations:[Integration] = []
+    if let results = json["results"] as AnyObject? as? [Dictionary<String, AnyObject>]{
+        for dict in results {
+            integrations.append(Integration(latestDictionary: dict))
+        }
+    }
+    
+    return integrations
+}

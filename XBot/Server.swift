@@ -14,7 +14,7 @@ public class Server {
     public let port = "20343"
     public let user = "xcode_bot"
     public let password = "Disco1990"
-    
+
     public init() {
         
     }
@@ -24,7 +24,7 @@ public class Server {
         
         Alamofire.request(.GET, "https://\(self.address):\(self.port)\(deviceListString)")
             .authenticate(user: user, password: password)
-            .responseJSON { (request, response, jsonOptional, error) -> Void in
+            .responseJSON { (request, response, jsonOptional, error) in
                 
                 if let json = jsonOptional as? Dictionary<String, AnyObject> {
                     let devices = devicesFromDevicesJson(json)
@@ -34,6 +34,14 @@ public class Server {
     }
     
     public func fetchBots(completion:([Bot]) -> () ) {
-    
+        Alamofire.request(.GET, "https://\(self.address):\(self.port)/api/bots")
+            .authenticate(user: user, password: password)
+            .responseJSON { (request, response, jsonOptional, error) in
+                
+                if let json = jsonOptional as? Dictionary<String, AnyObject> {
+                    let bots = botsFromBotsJson(json, self)
+                    completion(bots)
+                }
+        }
     }
 }
