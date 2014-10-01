@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A40D060819DC847B00840A18 /* NSHTTPURLResponse+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D060719DC847B00840A18 /* NSHTTPURLResponse+Utils.swift */; };
+		A40D060A19DCA42C00840A18 /* DoNotCheckIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D060919DCA42C00840A18 /* DoNotCheckIn.swift */; };
 		A4180F5819DB598500403AD9 /* XBot.h in Headers */ = {isa = PBXBuildFile; fileRef = A4180F5719DB598500403AD9 /* XBot.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4180F5E19DB598500403AD9 /* XBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4180F5219DB598500403AD9 /* XBot.framework */; };
 		A4180F6519DB598500403AD9 /* XBotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4180F6419DB598500403AD9 /* XBotTests.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		A40D060719DC847B00840A18 /* NSHTTPURLResponse+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSHTTPURLResponse+Utils.swift"; sourceTree = "<group>"; };
+		A40D060919DCA42C00840A18 /* DoNotCheckIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoNotCheckIn.swift; sourceTree = "<group>"; };
 		A4180F5219DB598500403AD9 /* XBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4180F5619DB598500403AD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4180F5719DB598500403AD9 /* XBot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBot.h; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				A4E60BC719DB6CC60068A941 /* Async.swift */,
 				A4180F5519DB598500403AD9 /* Supporting Files */,
 				A40D060719DC847B00840A18 /* NSHTTPURLResponse+Utils.swift */,
+				A40D060919DCA42C00840A18 /* DoNotCheckIn.swift */,
 			);
 			path = XBot;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				A4E60BC219DB69DB0068A941 /* Integration.swift in Sources */,
 				A4E60BC619DB6A040068A941 /* Bot.swift in Sources */,
 				A4E60BC419DB69F60068A941 /* Server.swift in Sources */,
+				A40D060A19DCA42C00840A18 /* DoNotCheckIn.swift in Sources */,
 				A40D060819DC847B00840A18 /* NSHTTPURLResponse+Utils.swift in Sources */,
 				A4E60BC819DB6CC60068A941 /* Async.swift in Sources */,
 				A4180F7819DB5F1200403AD9 /* Device.swift in Sources */,

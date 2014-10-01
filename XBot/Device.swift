@@ -20,7 +20,13 @@ public class Device {
         osVersion = deviceDictionary["osVersion"]! as String
         type = deviceDictionary["deviceType"]! as String
     }
+    
+    public func description() -> String {
+        return "\(type) \(name) (\(id)) \(osVersion)"
+    }
+    
 }
+
 
 func devicesFromDevicesJson(json:Dictionary<String, AnyObject>) -> [Device] {
     var devices:[Device] = []

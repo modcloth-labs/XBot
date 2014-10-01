@@ -11,7 +11,7 @@ import Foundation
 extension NSHTTPURLResponse {
     var success:Bool {
         get {
-            return false
+            return self.statusCode >= 200 && self.statusCode < 300
         }
     }
 }

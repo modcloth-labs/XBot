@@ -8,7 +8,7 @@
 
 import Foundation
 
-func waitUntil(inout finished:Bool, timeout:NSTimeInterval) {
+public func waitUntil(inout finished:Bool, timeout:NSTimeInterval) {
     let timeoutDate = NSDate(timeInterval: timeout, sinceDate: NSDate())
     do {
         NSRunLoop.currentRunLoop().runMode(NSDefaultRunLoopMode, beforeDate: timeoutDate);
