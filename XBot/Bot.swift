@@ -33,6 +33,27 @@ public class Bot {
                 }
         }
     }
+    
+    public func delete(completion:(success: Bool) ->()) {
+        Alamofire.request(.DELETE, "https://\(server.address):\(server.port)/api/bots/\(id)/\(rev)")
+            .authenticate(user: server.user, password: server.password)
+            .response { (request, response, responseData, error) in
+                
+                completion(success: response?.success ?? false)
+        }
+    }
+    
+    public func integrate(completion:(success: Bool, integration: Integration?) ->()) {
+        Alamofire.request(.POST, "https://\(server.address):\(server.port)/api/bots/\(id)/integrations")
+            .authenticate(user: server.user, password: server.password)
+            .response { (request, response, responseData, error)  in
+                
+                completion(success: response?.success ?? false, integration: nil)
+                
+        }
+
+    }
+    
 }
 
 func botsFromBotsJson(json:Dictionary<String, AnyObject>, server:Server) -> [Bot] {
