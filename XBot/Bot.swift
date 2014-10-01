@@ -46,9 +46,13 @@ public class Bot {
     public func integrate(completion:(success: Bool, integration: Integration?) ->()) {
         Alamofire.request(.POST, "https://\(server.address):\(server.port)/api/bots/\(id)/integrations")
             .authenticate(user: server.user, password: server.password)
-            .response { (request, response, responseData, error)  in
+            .responseJSON { (request, response, jsonOptional, error)  in
                 
-                completion(success: response?.success ?? false, integration: nil)
+                var integration:Integration?
+                if let json = jsonOptional as? Dictionary<String, AnyObject> {
+                    integration = Integration(latestDictionary: json)
+                }
+                completion(success: response?.success ?? false, integration: integration)
                 
         }
 
