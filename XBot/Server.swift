@@ -10,17 +10,20 @@ import Foundation
 import Alamofire
 
 public class Server {
-    public let address = "10.3.10.64"
-    public let port = "20343"
-    public let user = "xcode_bot"
-    public let password = "Disco1990"
+    public var port:String
+    public var host:String
+    public var user:String
+    public var password:String
 
-    public init() {
-        
+    public init(host:String, user:String, password:String, port:String = "20343") {
+        self.host = host
+        self.user = user
+        self.password = password
+        self.port = port
     }
     
     public func createBot(config:BotConfiguration, completion:(success: Bool, bot: Bot?) -> ()){
-        Alamofire.request(.POST, "https://\(self.address):\(self.port)/api/bots", parameters: config.dictionaryRepresentation as? [String : AnyObject], encoding: .JSON)
+        Alamofire.request(.POST, "https://\(self.host):\(self.port)/api/bots", parameters: config.dictionaryRepresentation as? [String : AnyObject], encoding: .JSON)
             .authenticate(user: user, password: password)
             .responseJSON { (request, response, jsonOptional, error) in
                 
@@ -37,7 +40,7 @@ public class Server {
     public func fetchDevices(completion:([Device]) -> () ) {
         let deviceListString = "/api/devices"
         
-        Alamofire.request(.GET, "https://\(self.address):\(self.port)\(deviceListString)")
+        Alamofire.request(.GET, "https://\(self.host):\(self.port)\(deviceListString)")
             .authenticate(user: user, password: password)
             .responseJSON { (request, response, jsonOptional, error) in
                 
@@ -49,7 +52,7 @@ public class Server {
     }
     
     public func fetchBots(completion:([Bot]) -> () ) {
-        Alamofire.request(.GET, "https://\(self.address):\(self.port)/api/bots")
+        Alamofire.request(.GET, "https://\(self.host):\(self.port)/api/bots")
             .authenticate(user: user, password: password)
             .responseJSON { (request, response, jsonOptional, error) in
                 
