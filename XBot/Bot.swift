@@ -48,7 +48,7 @@ public class Bot {
             .authenticate(user: server.user, password: server.password)
             .responseJSON { (request, response, jsonOptional, error)  in
                 
-                println("response: \(response)")
+//                println("response: \(response)")
 //                println("integration response:\(jsonOptional)")
 //                println("error:\(error)")
                 
@@ -56,7 +56,7 @@ public class Bot {
                 var integration:Integration?
                 if let json = jsonOptional as? Dictionary<String, AnyObject> {
                     integration = Integration(latestDictionary: json)
-                    println("integration: \(integration?.id)")
+//                    println("integration: \(integration?.id)")
                 }
                 completion(success: response?.success ?? false, integration: integration)
                 
