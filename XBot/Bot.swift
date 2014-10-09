@@ -28,7 +28,7 @@ public class Bot {
             .responseJSON { (request, response, jsonOptional, error) in
                 
                 if let json = jsonOptional as? Dictionary<String, AnyObject> {
-                    let integrations:[Integration]? = integrationsFromIntegrationsJson(json)
+                    let integrations:[Integration]? = integrationsFromIntegrationsJson(json, self)
                     completion(integrations?.first)
                 }
         }
@@ -55,7 +55,7 @@ public class Bot {
                 
                 var integration:Integration?
                 if let json = jsonOptional as? Dictionary<String, AnyObject> {
-                    integration = Integration(latestDictionary: json)
+                    integration = Integration(latestDictionary: json, bot:self)
 //                    println("integration: \(integration?.id)")
                 }
                 completion(success: response?.success ?? false, integration: integration)
