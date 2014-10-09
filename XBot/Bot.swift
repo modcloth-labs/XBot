@@ -29,7 +29,7 @@ public class Bot {
                 
                 if let json = jsonOptional as? Dictionary<String, AnyObject> {
                     let integrations:[Integration]? = integrationsFromIntegrationsJson(json)
-                    completion(integrations?.last)
+                    completion(integrations?.first)
                 }
         }
     }
