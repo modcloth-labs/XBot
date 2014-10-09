@@ -49,7 +49,7 @@ public class Integration {
 
     public var summaryString:String {
         get {
-            return "Xbot Integration #\(number) Results:\nErrors: \(errorCount)\nWarnings: \(warningCount)\nAnalyzerWarnings: \(analyzerWarningCount)\nTestFailures: \(testFailureCount)\nhttps://\(bot.server.host)/xcode/bots/latest/\(tinyId)"
+            return "XBot Integration \(number) Results:\nErrors: \(errorCount)\nWarnings: \(warningCount)\nAnalyzerWarnings: \(analyzerWarningCount)\nTestFailures: \(testFailureCount)\nhttps://\(bot.server.host)/xcode/bots/latest/\(tinyId)"
         }
     }
 }
