@@ -18,6 +18,7 @@ public class BotConfiguration {
     public var publicKey:String
     public var privateKey:String
     public var deviceIds:[String]
+    public var preTrigger:[String]
     
     public var performsTestAction:Bool = false
     public var performsAnalyzeAction:Bool = false
@@ -42,7 +43,8 @@ public class BotConfiguration {
         branch:String,
         publicKey:String,
         privateKey:String,
-        deviceIds:[String]
+        deviceIds:[String],
+        preTrigger:[String]
         ) {
             
         self.name = name
@@ -53,6 +55,7 @@ public class BotConfiguration {
         self.publicKey = publicKey
         self.privateKey = privateKey
         self.deviceIds = deviceIds
+        self.preTrigger = preTrigger
     }
     
     var groupDictionaryRepresentation:NSDictionary {
@@ -110,6 +113,11 @@ public class BotConfiguration {
                     "builtFromClean":1,
                     "testingDeviceIDs": self.deviceIds,
                     "triggers":[
+                        ["phase":1,
+                            "scriptBody": self.preTrigger,
+                            "type":1,
+                            "name":"Run Script"
+                        ],
                         ["phase":2,
                             "scriptBody":"",
                             "type":2,
