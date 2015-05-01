@@ -25,12 +25,12 @@ public class Integration {
 
     public init(latestDictionary:NSDictionary, bot:Bot) {
         self.bot = bot
-        id = latestDictionary["_id"]! as String
-        botName = latestDictionary["bot"]!["name"]! as String
-        botId = latestDictionary["bot"]!["_id"]! as String
-        currentStep = latestDictionary["currentStep"]! as String
-        number = latestDictionary["number"]! as NSNumber
-        tinyId = latestDictionary["tinyID"]! as String
+        id = latestDictionary["_id"]! as! String
+        botName = latestDictionary["bot"]!["name"]! as! String
+        botId = latestDictionary["bot"]!["_id"]! as! String
+        currentStep = latestDictionary["currentStep"]! as! String
+        number = latestDictionary["number"]! as! NSNumber
+        tinyId = latestDictionary["tinyID"]! as! String
 
         if let r = latestDictionary["result"] as? String {
             result = r
@@ -38,7 +38,7 @@ public class Integration {
             result = ""
         }
 
-        if let summary = latestDictionary["buildResultSummary"] as AnyObject? as Dictionary<String, NSNumber>? {
+        if let summary = latestDictionary["buildResultSummary"] as AnyObject? as! Dictionary<String, NSNumber>? {
             analyzerWarningCount = summary["analyzerWarningCount"]!
             errorCount = summary["errorCount"]!
             testFailureCount = summary["testFailureCount"]!

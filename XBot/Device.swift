@@ -15,10 +15,10 @@ public class Device {
     public var type:String
     
     public init(deviceDictionary:NSDictionary){
-        id = deviceDictionary["_id"]! as String
-        name = deviceDictionary["name"]! as String
-        osVersion = deviceDictionary["osVersion"]! as String
-        type = deviceDictionary["deviceType"]! as String
+        id = deviceDictionary["_id"]! as! String
+        name = deviceDictionary["name"]! as! String
+        osVersion = deviceDictionary["osVersion"]! as! String
+        type = deviceDictionary["deviceType"]! as! String
     }
     
     public func description() -> String {

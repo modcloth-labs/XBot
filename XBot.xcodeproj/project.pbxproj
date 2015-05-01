@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50A0EAB68344E6BFE854A67E /* Pods_XBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A506C4E365F54F3DB8244A /* Pods_XBot.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A40D060819DC847B00840A18 /* NSHTTPURLResponse+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D060719DC847B00840A18 /* NSHTTPURLResponse+Utils.swift */; };
 		A4180F5819DB598500403AD9 /* XBot.h in Headers */ = {isa = PBXBuildFile; fileRef = A4180F5719DB598500403AD9 /* XBot.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4180F5E19DB598500403AD9 /* XBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4180F5219DB598500403AD9 /* XBot.framework */; };
@@ -17,7 +18,6 @@
 		A4E60BC419DB69F60068A941 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E60BC319DB69F60068A941 /* Server.swift */; };
 		A4E60BC619DB6A040068A941 /* Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E60BC519DB6A040068A941 /* Bot.swift */; };
 		A4E60BC819DB6CC60068A941 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E60BC719DB6CC60068A941 /* Async.swift */; };
-		A4E60BD519DB76AB0068A941 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E60BD419DB76AB0068A941 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0720D10B4E97366E8E9B885B /* Pods-XBot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XBot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XBot/Pods-XBot.debug.xcconfig"; sourceTree = "<group>"; };
 		A40D060719DC847B00840A18 /* NSHTTPURLResponse+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSHTTPURLResponse+Utils.swift"; sourceTree = "<group>"; };
 		A4180F5219DB598500403AD9 /* XBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4180F5619DB598500403AD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,7 +45,8 @@
 		A4E60BC319DB69F60068A941 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		A4E60BC519DB6A040068A941 /* Bot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bot.swift; sourceTree = "<group>"; };
 		A4E60BC719DB6CC60068A941 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
-		A4E60BD419DB76AB0068A941 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/XBotBuilder-gwouacushguetjdkpzqhzldqdxio/Build/Products/Debug/Alamofire.framework"; sourceTree = "<group>"; };
+		C4A506C4E365F54F3DB8244A /* Pods_XBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6F15EB0961BB9BD0661FD06 /* Pods-XBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XBot.release.xcconfig"; path = "Pods/Target Support Files/Pods-XBot/Pods-XBot.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4E60BD519DB76AB0068A941 /* Alamofire.framework in Frameworks */,
+				50A0EAB68344E6BFE854A67E /* Pods_XBot.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,13 +69,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19CD3D8DC6C0ED7AAE214518 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0720D10B4E97366E8E9B885B /* Pods-XBot.debug.xcconfig */,
+				E6F15EB0961BB9BD0661FD06 /* Pods-XBot.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9BCF04A44459B6F4EA5D62BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4A506C4E365F54F3DB8244A /* Pods_XBot.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A4180F4819DB598500403AD9 = {
 			isa = PBXGroup;
 			children = (
-				A4E60BD419DB76AB0068A941 /* Alamofire.framework */,
 				A4180F5419DB598500403AD9 /* XBot */,
 				A4180F6119DB598500403AD9 /* XBotTests */,
 				A4180F5319DB598500403AD9 /* Products */,
+				19CD3D8DC6C0ED7AAE214518 /* Pods */,
+				9BCF04A44459B6F4EA5D62BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,10 +165,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4180F6819DB598500403AD9 /* Build configuration list for PBXNativeTarget "XBot" */;
 			buildPhases = (
+				399E0AAAF35BEFA03F6294FF /* Check Pods Manifest.lock */,
 				A4180F4D19DB598500403AD9 /* Sources */,
 				A4180F4E19DB598500403AD9 /* Frameworks */,
 				A4180F4F19DB598500403AD9 /* Headers */,
 				A4180F5019DB598500403AD9 /* Resources */,
+				869D475C05641D35F8E686BE /* Embed Pods Frameworks */,
+				CEE8AED28AB20763436044B3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,6 +251,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		399E0AAAF35BEFA03F6294FF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		869D475C05641D35F8E686BE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XBot/Pods-XBot-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEE8AED28AB20763436044B3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XBot/Pods-XBot-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A4180F4D19DB598500403AD9 /* Sources */ = {
@@ -346,6 +417,7 @@
 		};
 		A4180F6919DB598500403AD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0720D10B4E97366E8E9B885B /* Pods-XBot.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -353,14 +425,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/XBotBuilder-gwouacushguetjdkpzqhzldqdxio/Build/Products/Debug",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = XBot/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -369,6 +439,7 @@
 		};
 		A4180F6A19DB598500403AD9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6F15EB0961BB9BD0661FD06 /* Pods-XBot.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -376,14 +447,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/XBotBuilder-gwouacushguetjdkpzqhzldqdxio/Build/Products/Debug",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = XBot/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
