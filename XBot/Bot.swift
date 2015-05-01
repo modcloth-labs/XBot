@@ -16,9 +16,9 @@ public class Bot {
     public var server:Server
     
     public init(botDictionary:NSDictionary, server:Server) {
-        id = botDictionary["_id"]! as String
-        rev = botDictionary["_rev"]! as String
-        name = botDictionary["name"]! as String
+        id = botDictionary["_id"]! as! String
+        rev = botDictionary["_rev"]! as! String
+        name = botDictionary["name"]! as! String
         self.server = server
     }
     
